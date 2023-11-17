@@ -1,0 +1,82 @@
+﻿<Window x:Class="Wpf.Calculadora.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf.Calculadora"
+        mc:Ignorable="d"
+        Title="Caluladora" Height="470" Width="370" Icon="/calculadora.png">
+    <Grid Background="#2C2C2C">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="txtResult"
+                 IsReadOnly="True" 
+                 TextAlignment="Right" 
+                 VerticalContentAlignment="Bottom"
+                 FontSize="40" 
+                 Grid.Row="0"
+                 Grid.Column="0" 
+                 Grid.ColumnSpan="4">0
+        </TextBox>
+
+
+        <!--#region Números -->
+        <Button x:Name="btn7" Grid.Row="3" Grid.Column="0" Click="btn7_Click">7</Button>
+        <Button x:Name="btn8" Grid.Row="3" Grid.Column="1" Click="btn8_Click">8</Button>
+        <Button x:Name="btn9" Grid.Row="3" Grid.Column="2" Click="btn9_Click">9</Button>
+        <Button x:Name="btn4" Grid.Row="4" Grid.Column="0" Click="btn4_Click">4</Button>
+        <Button x:Name="btn5" Grid.Row="4" Grid.Column="1" Click="btn5_Click">5</Button>
+        <Button x:Name="btn6" Grid.Row="4" Grid.Column="2" Click="btn6_Click">6</Button>
+        <Button x:Name="btn1" Grid.Row="5" Grid.Column="0" Click="btn1_Click">1</Button>
+        <Button x:Name="btn2" Grid.Row="5" Grid.Column="1" Click="btn2_Click">2</Button>
+        <Button x:Name="btn3" Grid.Row="5" Grid.Column="2" Click="btn3_Click">3</Button>
+        <Button x:Name="btn0" Grid.Row="6" Grid.Column="1" Click="btn0_Click">0</Button>
+        <!--#endregion-->
+
+
+        <!--#region Operadores -->
+
+        <!-- Operaciones "avanzadas" -->
+        <Button x:Name="btnInverse" Grid.Row="2" Grid.Column="0" Content="1/x" Click="btnInverse_Click"/>
+        <Button x:Name="btnPow" Grid.Row="2" Grid.Column="1" Content="x²" Click="btnPow_Click"/>
+        <Button x:Name="btnSqrt" Grid.Row="2" Grid.Column="2" Content="√" Click="btnSqrt_Click"/>
+
+        <!-- Operaciones basicas-->
+        <Button x:Name="btnDivision" Click="btnDivision_Click" Grid.Row="2" Grid.Column="3" Content="/"/>
+        <Button x:Name="btnMultiplication" Click="btnMultiplicatino_Click"     Grid.Row="3" Grid.Column="3" Content="*"/>
+        <Button x:Name="btnSubtraction" Click="btnSubtraction_Click" Grid.Row="4" Grid.Column="3" Content="-"/>
+        <Button x:Name="btnAddition" Click="btnAddition_Click" Grid.Row="5" Grid.Column="3" Content="+"/>
+        <Button x:Name="btnEqual" Click="btnEqual_Click"  Grid.Row="6" Grid.Column="3" Content="="/>
+        <!--#endregion-->
+
+
+        <!--#region Limpiadores de la pantalla -->
+        <Button x:Name="btnPorcentage" Grid.Row="1" Grid.Column="0" Click="btnPorcentage_Click">%</Button>
+        <Button x:Name="btnCe" Click="btnCe_Click" Grid.Row="1" Grid.Column="1">CE</Button>
+        <Button x:Name="btnC" Click="btnC_Click" Grid.Row="1" Grid.Column="2">C</Button>
+        <Button x:Name="btnBack" Grid.Row="1" Grid.Column="3" Content="&lt;=" Click="btnBack_Click"></Button>
+        <!--#endregion-->
+
+        <!--#region Otras operaciones -->
+        <Button x:Name="btnPositiveNegative" Grid.Row="6" Grid.Column="0" Content="+/-" Click="btnPositiveNegative_Click"></Button>
+        <Button x:Name="btnPoint" Grid.Row="6" Grid.Column="2" Content="," Click="btnPoint_Click"></Button>
+
+        <!--#endregion-->
+
+    </Grid>
+</Window>

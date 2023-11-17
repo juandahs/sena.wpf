@@ -1,0 +1,16 @@
+﻿<Window x:Class="Wpf.ComboBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf.ComboBox"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="120" Width="225">
+    <Grid>
+        <ComboBox HorizontalAlignment="Left" Margin="45,24,0,0" VerticalAlignment="Top" Width="120" >
+            <ComboBoxItem Content="Jeffry"/>
+            <ComboBoxItem Content="Juan David Castro MArín"/>
+        </ComboBox>
+
+    </Grid>
+</Window>
